@@ -1,4 +1,10 @@
 #include "fulllightingintegrator.h"
+//Instruction:
+/*This function is for full lighting integrator, one of the most important features in path tracer system.
+  It simulates photon path and recursively computes the final illumination at certain point.
+  Use multiple importance sampling method, and combine sampling result from both materials and light sources with weights.
+
+*/
 
 Color3f FullLightingIntegrator::Li(const Ray &ray, const Scene &scene, std::shared_ptr<Sampler> sampler, int depth,Color3f beta1) const
 {
